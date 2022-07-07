@@ -1,5 +1,7 @@
 
 
+from operator import length_hint
+
 
 lugares = []
 #Lista = 0
@@ -19,23 +21,28 @@ print("\n")
  
 cadeiras = int (input("\nEscolha a cadeira que pretende reservar:"))
 
-while ( lugares [i] != True ):#quantidadeLugares):
+while ( lugares [i] != True ):
     
     for i in range(quantidadeLugares):
         if (cadeiras == lugares [i]):
             lugares [i] = "x"
-            print("\n")
-            #print(lugares)    
+            print("\n") 
+                       
         if (lugares [i] =="x"):
-            print(lugares, ( "\nLugares com X está ocupado, faça uma nova escolha:"))
+            print(lugares)
             print("\n")
+       
+        if lugares [i] == "x" :
+            print("Lugares com (X) está ocupado, escolha outra cadeira")   
+                     
+    cadeiras = int(input("Escolha a proxima cadeira disponivel:")) 
+    print(lugares)
+    
     if (cadeiras <= 0):
-        print("fim")
+        print("\n\nVocê digitou (0), não é mais possível escolher cadeiras, bom filme")
+        print("Fim")
         break 
 
                              
-    cadeiras = int(input("\nEscolha a proxima cadeira disponivel")) 
+   
     
- 
-
-
