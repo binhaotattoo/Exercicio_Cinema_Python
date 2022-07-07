@@ -42,7 +42,7 @@ while ( lugares [i] != True ):
         print("\n\nVocê digitou (0), não é mais possível escolher cadeiras, bom filme")
         print("Fim")
         break 
-
-                             
+#faltando operação de saida para quando  a sala estiver cheia. 
+                        
    
     
